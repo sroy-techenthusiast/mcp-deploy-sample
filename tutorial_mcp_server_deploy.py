@@ -51,5 +51,7 @@ def get_user_role() -> Any:
 
 if __name__ == "__main__":
     mcp.run(
-        transport="streamable-http"
+        transport="streamable-http",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT")),
     )
